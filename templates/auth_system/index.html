@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css1/bootstrap.min.css'%}">
+   <script src="{% static 'css/jquery.min.js'%}"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="{% static 'css/ind.css' %}">
+</head>
+<body>
+   
+    
+<h1> Open source Music Player</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="filename.." name="file_name"><br>
+        <input type="file" name="my_file" >
+        <button type="submit">Submit</button>
+     </form><br>
+     <button class='hi' ><a href="{% url 'logout' %}">Logout</a></button>
+     
+</body>
+</html>
